@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Database Connection settings -->
+        <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="connection.url">jdbc:hsqldb:file:hsqldb/BankDB;shutdown=true;hsqldb.write_delay=false;</property>
+        <property name="connection.username">SA</property>
+        <property name="connection.password">sa</property>
+
+        <!-- <property name="hibernate.connection.pool_size">1</property> -->
+        <!--<property name="hibernate.current_session_context_class">thread</property> -->
+
+        <!-- Enable the logging of all the generated SQL statements to the console -->
+        <property name="show_sql">true</property>
+
+        <!-- Format the generated SQL statement to make it more readable, -->
+        <property name="format_sql">false</property>
+
+        <!-- Hibernate will put comments inside all generated SQL statements to
+         hint what’s the generated SQL trying to do -->
+        <property name="use_sql_comments">false</property>
+
+        <!-- This property makes Hibernate generate the appropriate SQL for the
+         chosen database. -->
+        <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+
+
+        <!--
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <property name="hibernate.archive.autodetection">class,hbm</property>
+        -->
+        <!-- mappings for annotated classes -->
+        <!--<mapping class="com.haulmont.testtask.models.Doctor" />
+        <mapping class="com.haulmont.testtask.models.Patient" />
+        <mapping class="com.haulmont.testtask.models.Prescription" /> -->
+
+    </session-factory>
+
+</hibernate-configuration>
