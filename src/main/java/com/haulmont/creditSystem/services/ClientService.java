@@ -1,15 +1,15 @@
 package com.haulmont.creditSystem.services;
 
 import com.haulmont.creditSystem.dao.ClientDao;
-import com.haulmont.creditSystem.dao.IDao;
+import com.haulmont.creditSystem.dao.BankDao;
 import com.haulmont.creditSystem.models.Client;
 
 import java.util.List;
 import java.util.UUID;
 
-public class ClientService implements IService<Client> {
+public class ClientService implements BankService<Client> {
 
-    private IDao<Client> clientDao;
+    private BankDao<Client> clientDao;
 
     public  ClientService(){
         clientDao = new ClientDao();

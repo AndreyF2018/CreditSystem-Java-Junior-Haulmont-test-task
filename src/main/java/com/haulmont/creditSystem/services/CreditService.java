@@ -1,46 +1,44 @@
 package com.haulmont.creditSystem.services;
 
-import com.haulmont.creditSystem.dao.ClientDao;
 import com.haulmont.creditSystem.dao.CreditDao;
-import com.haulmont.creditSystem.dao.IDao;
-import com.haulmont.creditSystem.models.Client;
+import com.haulmont.creditSystem.dao.BankDao;
 import com.haulmont.creditSystem.models.Credit;
 
 import java.util.List;
 import java.util.UUID;
 
-public class CreditService implements IService<Credit>{
+public class CreditService implements BankService<Credit> {
 
-    private IDao<Credit> creditIDao;
+    private BankDao<Credit> creditDao;
 
     public  CreditService(){
-        creditIDao = new CreditDao();
+        creditDao = new CreditDao();
     }
     @Override
     public Credit findById(UUID id) {
 
-        return creditIDao.findById(id);
+        return creditDao.findById(id);
     }
 
     @Override
     public void create (Credit credit) {
 
-        creditIDao.create(credit);
+        creditDao.create(credit);
     }
 
     @Override
     public void delete(Credit credit) {
 
-        creditIDao.delete(credit);
+        creditDao.delete(credit);
     }
 
     @Override
     public void update(Credit credit) {
-        creditIDao.update(credit);
+        creditDao.update(credit);
     }
 
     @Override
     public List<Credit> findAll() {
-        return creditIDao.findAll();
+        return creditDao.findAll();
     }
 }

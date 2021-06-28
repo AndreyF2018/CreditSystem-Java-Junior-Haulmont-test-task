@@ -34,10 +34,9 @@ public class Client {
     @Column(name = "PASSPORT_ID")
     private String passportId;
 
-    /*
-    @OneToOne (mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
-    private CreditOffer creditOffer;
-*/
+
+   // @OneToOne (mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+    //private CreditOffer creditOffer;
 
     public UUID getId() {
         return id;
@@ -123,5 +122,13 @@ public class Client {
     @Override
     public int hashCode() {
         return Objects.hash(name, secondName, patronymic, phoneNumber, email, passportId);
+    }
+
+    @Override
+    public String toString() {
+        return name + " " + secondName + " " + patronymic + " " +
+                ", phone number = " + phoneNumber +
+                ", email = " + email +
+                ", passport Id = " + passportId;
     }
 }

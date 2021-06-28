@@ -8,7 +8,6 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "BANK")
 public class Bank {
-    @Column(name = "ID")
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")

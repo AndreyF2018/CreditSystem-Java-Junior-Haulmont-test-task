@@ -14,7 +14,7 @@
         <property name="connection.password">sa</property>
 
         <!-- <property name="hibernate.connection.pool_size">1</property> -->
-        <!--<property name="hibernate.current_session_context_class">thread</property> -->
+        <property name="hibernate.current_session_context_class">org.hibernate.context.JTASessionContext</property>
 
         <!-- Enable the logging of all the generated SQL statements to the console -->
         <property name="show_sql">true</property>

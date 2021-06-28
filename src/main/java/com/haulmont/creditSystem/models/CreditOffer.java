@@ -19,28 +19,34 @@ public class CreditOffer {
     @Column(name = "CREDIT_SUM")
     private long creditSum;
 
-   /* @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
     @JoinColumn(name = "CLIENT_ID")
     private Client client;
 
-    */
-
-   /* @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
     @JoinColumn(name = "CREDIT_ID")
     private Credit credit;
 
-    */
 
    /* @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
     @JoinColumn(name = "PAYMENT_SCHEDULE_ID")
     */
-    private List<PaymentSchedule> paymentSchedules;
+    //private List<PaymentSchedule> paymentSchedules;
 
+    public CreditOffer(){
+
+    }
     public CreditOffer(Client client, Credit credit, long creditSum, List<PaymentSchedule> paymentSchedules){
-       // this.setClient(client);
-       // this.setCredit(credit);
+        this.setClient(client);
+        this.setCredit(credit);
         this.setCreditSum(creditSum);
-        this.setPaymentSchedules(paymentSchedules);
+        //this.setPaymentSchedules(paymentSchedules);
+    }
+
+    public CreditOffer(Client client, Credit credit, long creditSum){
+        this.setClient(client);
+        this.setCredit(credit);
+        this.setCreditSum(creditSum);
     }
     public UUID getId() {
         return id;
@@ -58,19 +64,15 @@ public class CreditOffer {
         this.creditSum = creditSum;
     }
 
-   /* public Client getClient() {
+    public Client getClient() {
         return client;
     }
-
-
 
     public void setClient(Client client) {
         this.client = client;
     }
 
-    */
-
-   /* public Credit getCredit() {
+    public Credit getCredit() {
         return credit;
     }
 
@@ -78,9 +80,8 @@ public class CreditOffer {
         this.credit = credit;
     }
 
-    */
 
-    public List<PaymentSchedule> getPaymentSchedules() {
+    /*public List<PaymentSchedule> getPaymentSchedules() {
         return paymentSchedules;
     }
 
@@ -88,15 +89,17 @@ public class CreditOffer {
         this.paymentSchedules = paymentSchedules;
     }
 
+     */
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CreditOffer that = (CreditOffer) o;
         return creditSum == that.creditSum &&
-               // client.equals(that.client) &&
-                //credit.equals(that.credit) &&
-                paymentSchedules.equals(that.paymentSchedules);
+                client.equals(that.client) &&
+                credit.equals(that.credit);
+               // paymentSchedules.equals(that.paymentSchedules);
     }
 /*
     @Override

@@ -18,7 +18,7 @@ public class HibernateUtil
                 //configuration.addAnnotatedClass(Bank.class);
                 configuration.addAnnotatedClass(Client.class);
                 configuration.addAnnotatedClass(Credit.class);
-                //configuration.addAnnotatedClass(CreditOffer.class);
+                configuration.addAnnotatedClass(CreditOffer.class);
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());
 

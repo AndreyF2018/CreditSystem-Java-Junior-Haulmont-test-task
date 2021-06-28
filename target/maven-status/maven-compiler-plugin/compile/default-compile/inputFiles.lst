@@ -1,17 +1,28 @@
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\utils\Validator.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\utils\HibernateUtil.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\dao\IDao.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\views\modalWindows\ClientEditWindow.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\MainUI.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\models\Credit.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\views\ClientView.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\services\IService.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\dao\ClientDao.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\services\CreditService.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\models\PaymentSchedule.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\models\Client.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\models\CreditOffer.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\services\ClientService.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\models\Bank.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\views\CreditView.java
-C:\Intelliji projects\CreditSystem\src\main\java\com\haulmont\creditSystem\dao\CreditDao.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\models\Client.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\utils\Validator.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\BankView.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\CreditOfferView.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\modalWindows\ClientEditWindow.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\modalWindows\CreditOfferDeleteWindow.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\dao\CreditOfferDao.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\CreditView.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\modalWindows\CreditAddWindow.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\modalWindows\CreditOfferEditWindow.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\MainUI.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\models\CreditOffer.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\utils\HibernateUtil.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\modalWindows\ArrangeCreditWindow.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\services\CreditService.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\modalWindows\CreditDeleteWindow.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\dao\BankDao.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\dao\CreditDao.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\models\Bank.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\services\ClientService.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\modalWindows\ClientDeleteWindow.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\services\BankService.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\models\Credit.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\modalWindows\CreditEditWindow.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\models\PaymentSchedule.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\dao\ClientDao.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\services\CreditOfferService.java
+C:\Git\CreditSystem\src\main\java\com\haulmont\creditSystem\views\ClientView.java

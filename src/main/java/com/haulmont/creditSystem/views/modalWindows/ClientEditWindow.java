@@ -2,11 +2,13 @@ package com.haulmont.creditSystem.views.modalWindows;
 
 import com.haulmont.creditSystem.models.Client;
 import com.haulmont.creditSystem.services.ClientService;
-import com.haulmont.creditSystem.services.IService;
+import com.haulmont.creditSystem.services.BankService;
 import com.haulmont.creditSystem.utils.Validator;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
+
+import java.util.List;
 
 public class ClientEditWindow extends Window {
 
@@ -15,7 +17,7 @@ public class ClientEditWindow extends Window {
 
     private Client selectedClient;
 
-    private IService<Client> clientIService;
+    private BankService<Client> clientService;
 
     private TextField nameField = new TextField("New name*:");
     private  TextField secondNameField = new TextField("New second name*:");
@@ -29,7 +31,7 @@ public class ClientEditWindow extends Window {
 
     public ClientEditWindow(Client client){
         this.selectedClient = client;
-        clientIService = new ClientService();
+        clientService = new ClientService();
         setModal(true);
         setWidth("25%");
         setHeight("80%");
@@ -62,6 +64,7 @@ public class ClientEditWindow extends Window {
         mainLayout.setComponentAlignment(emailField, Alignment.TOP_CENTER);
         mainLayout.setComponentAlignment(passportIdField, Alignment.TOP_CENTER);
         mainLayout.setComponentAlignment(buttonsLayout, Alignment.BOTTOM_CENTER);
+
         setContent(mainLayout);
     }
 
@@ -91,11 +94,11 @@ public class ClientEditWindow extends Window {
             return false;
         }
         if(!(Validator.isDigitType(phoneNumberField.getValue()) && Validator.isDigitType(passportIdField.getValue()))){
-            Notification.show("Invalid numeric characters");
+            Notification.show("Invalid numeric symbols");
             return false;
         }
-        if (! (Validator.isLetterType(nameField.getValue()) && Validator.isLetterType(secondNameField.getValue()) && (patronymicField.getValue().equals("") || Validator.isLetterType(patronymicField.getValue())  ))){
-            Notification.show("Invalid characters in full name");
+        if (!(Validator.isLetterType(nameField.getValue()) && Validator.isLetterType(secondNameField.getValue()) && (patronymicField.getValue().equals("") || Validator.isLetterType(patronymicField.getValue())  ))){
+            Notification.show("Invalid symbols in full name");
             return false;
         }
         // Capitalize the first letters of the first name, second name and patronymic, and cursive the remaining letters:
@@ -114,8 +117,9 @@ public class ClientEditWindow extends Window {
             selectedClient.setEmail(email);
             selectedClient.setPassportId(passportId);
 
-            clientIService.update(selectedClient);
+            clientService.update(selectedClient);
             Notification.show("Client's data has been successfully updated");
+            close();
             return true;
         }
         catch (Exception e) {
