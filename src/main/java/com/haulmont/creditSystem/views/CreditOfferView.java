@@ -1,12 +1,10 @@
 package com.haulmont.creditSystem.views;
 
-import com.haulmont.creditSystem.models.Client;
-import com.haulmont.creditSystem.models.Credit;
 import com.haulmont.creditSystem.models.CreditOffer;
 import com.haulmont.creditSystem.services.BankService;
 import com.haulmont.creditSystem.services.CreditOfferService;
-import com.haulmont.creditSystem.views.modalWindows.CreditOfferDeleteWindow;
 import com.haulmont.creditSystem.views.modalWindows.CreditOfferEditWindow;
+import com.haulmont.creditSystem.views.modalWindows.InputMonthsWindow;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
@@ -56,7 +54,16 @@ public class CreditOfferView extends VerticalLayout {
         scheduleBtn.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent clickEvent) {
-
+                CreditOffer selectedOffer = null;
+                for(CreditOffer item : offerGrid.getSelectedItems()){
+                    selectedOffer = item;
+                }
+                if(selectedOffer != null) {
+                    openInputMonthsWindow(selectedOffer);
+                }
+                else {
+                    Notification.show("Please select a credit offer");
+                }
             }
         });
         editBtn.addClickListener(new Button.ClickListener() {
@@ -98,6 +105,10 @@ public class CreditOfferView extends VerticalLayout {
                 findAll();
             }
         });
+    }
+
+    private void openInputMonthsWindow(CreditOffer selectedOffer){
+        UI.getCurrent().addWindow(new InputMonthsWindow(selectedOffer));
     }
 
     private void openEditWindow(CreditOffer selectedOffer){

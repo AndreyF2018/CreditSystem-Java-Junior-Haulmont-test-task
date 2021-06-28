@@ -5,13 +5,16 @@ com\haulmont\creditSystem\views\modalWindows\CreditAddWindow.class
 com\haulmont\creditSystem\views\CreditView$4.class
 com\haulmont\creditSystem\views\ClientView$3.class
 com\haulmont\creditSystem\views\modalWindows\ArrangeCreditWindow.class
+com\haulmont\creditSystem\views\modalWindows\InputMonthsWindow$2.class
 com\haulmont\creditSystem\utils\Validator.class
 com\haulmont\creditSystem\views\modalWindows\CreditOfferDeleteWindow.class
 com\haulmont\creditSystem\dao\CreditOfferDao.class
 com\haulmont\creditSystem\views\modalWindows\ClientEditWindow$2.class
+com\haulmont\creditSystem\views\modalWindows\PaymentScheduleWindow.class
 com\haulmont\creditSystem\views\CreditView$1.class
 com\haulmont\creditSystem\views\modalWindows\CreditAddWindow$1.class
 com\haulmont\creditSystem\views\BankView.class
+com\haulmont\creditSystem\views\modalWindows\InputMonthsWindow.class
 com\haulmont\creditSystem\views\ClientView$2.class
 com\haulmont\creditSystem\views\modalWindows\CreditEditWindow.class
 com\haulmont\creditSystem\views\modalWindows\CreditDeleteWindow$1.class
@@ -28,6 +31,7 @@ com\haulmont\creditSystem\views\ClientView$1.class
 com\haulmont\creditSystem\views\modalWindows\CreditDeleteWindow$2.class
 com\haulmont\creditSystem\views\modalWindows\ArrangeCreditWindow$2.class
 com\haulmont\creditSystem\models\Credit.class
+com\haulmont\creditSystem\views\modalWindows\InputMonthsWindow$1.class
 com\haulmont\creditSystem\views\CreditOfferView$1.class
 com\haulmont\creditSystem\views\CreditView$5.class
 com\haulmont\creditSystem\views\modalWindows\CreditAddWindow$2.class
@@ -52,4 +56,5 @@ com\haulmont\creditSystem\dao\BankDao.class
 com\haulmont\creditSystem\services\BankService.class
 com\haulmont\creditSystem\views\CreditView.class
 com\haulmont\creditSystem\models\CreditOffer.class
+com\haulmont\creditSystem\views\modalWindows\PaymentScheduleWindow$1.class
 com\haulmont\creditSystem\views\modalWindows\CreditOfferEditWindow.class

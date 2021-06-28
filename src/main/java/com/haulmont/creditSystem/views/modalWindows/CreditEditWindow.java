@@ -22,11 +22,11 @@ public class CreditEditWindow extends Window {
     private BankService<Credit> creditService;
     private BankService<CreditOffer> offerService;
 
-    private TextField creditLimitField = new com.vaadin.ui.TextField("New credit limit*:");
-    private TextField interestRateField = new com.vaadin.ui.TextField("New interest rate*:");
+    private TextField creditLimitField = new TextField("New credit limit*:");
+    private TextField interestRateField = new TextField("New interest rate*:");
 
-    private Button okBtn = new com.vaadin.ui.Button("Ok", VaadinIcons.CHECK);
-    private Button cancelBtn = new com.vaadin.ui.Button("Cancel", VaadinIcons.CLOSE_CIRCLE);
+    private Button okBtn = new Button("Ok", VaadinIcons.CHECK);
+    private Button cancelBtn = new Button("Cancel", VaadinIcons.CLOSE_CIRCLE);
 
     public CreditEditWindow(Credit credit){
         this.selectedCredit = credit;

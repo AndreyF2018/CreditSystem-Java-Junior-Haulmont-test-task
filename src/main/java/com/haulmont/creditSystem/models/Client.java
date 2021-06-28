@@ -126,7 +126,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return name + " " + secondName + " " + patronymic + " " +
+        return name + " " + secondName + " " + patronymic +
                 ", phone number = " + phoneNumber +
                 ", email = " + email +
                 ", passport Id = " + passportId;

@@ -34,8 +34,11 @@ public class PaymentSchedule {
     // creditOffer.creditSum -= creditOffer.creditSum / months
 
    // @OneToOne(mappedBy = "paymentSchedules", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
-    private CreditOffer creditOffer;
+    //private CreditOffer creditOffer;
 
+    public PaymentSchedule() {
+
+    }
     public PaymentSchedule(LocalDate paymentDate, BigDecimal paymentSum, BigDecimal loanBodySum, BigDecimal interestSum){
         this.setPaymentDate(paymentDate);
         this.setPaymentSum(paymentSum);
@@ -83,13 +86,15 @@ public class PaymentSchedule {
         this.interestSum = interestSum;
     }
 
-    public CreditOffer getCreditOffer() {
+    /*public CreditOffer getCreditOffer() {
         return creditOffer;
     }
 
     public void setCreditOffer(CreditOffer creditOffer) {
         this.creditOffer = creditOffer;
     }
+
+     */
 
     @Override
     public boolean equals(Object o) {
@@ -99,12 +104,12 @@ public class PaymentSchedule {
         return paymentDate.equals(that.paymentDate) &&
                 paymentSum.equals(that.paymentSum) &&
                 loanBodySum.equals(that.loanBodySum) &&
-                interestSum.equals(that.interestSum) &&
-                creditOffer.equals(that.creditOffer);
+                interestSum.equals(that.interestSum);
+                //creditOffer.equals(that.creditOffer);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(paymentDate, paymentSum, loanBodySum, interestSum, creditOffer);
+        return Objects.hash(paymentDate, paymentSum, loanBodySum, interestSum);
     }
 }
