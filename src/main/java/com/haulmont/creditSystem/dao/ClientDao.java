@@ -1,5 +1,6 @@
 package com.haulmont.creditSystem.dao;
 
+import com.haulmont.creditSystem.models.Bank;
 import com.haulmont.creditSystem.models.Client;
 import com.haulmont.creditSystem.utils.HibernateUtil;
 import org.hibernate.Session;
@@ -18,10 +19,8 @@ public class ClientDao extends BankDao<Client> {
 
     @Override
     public List<Client> findAll() {
-        //Session session = HibernateUtil.getSessionFactory().openSession();
         List<Client> clients = (List<Client>)HibernateUtil.getSessionFactory().openSession().createQuery("from Client").list();
-        //List<Client> clients = session.createQuery("from Client").list();
-        //session.close();
+        Bank.setClients(clients);
         return clients;
     }
 }

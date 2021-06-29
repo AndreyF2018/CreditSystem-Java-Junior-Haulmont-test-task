@@ -149,5 +149,4 @@ public class ArrangeCreditWindow extends Window {
             return false;
         }
     }
-
 }

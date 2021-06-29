@@ -15,7 +15,6 @@ public class HibernateUtil
         if (sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration().configure();
-                //configuration.addAnnotatedClass(Bank.class);
                 configuration.addAnnotatedClass(Client.class);
                 configuration.addAnnotatedClass(Credit.class);
                 configuration.addAnnotatedClass(CreditOffer.class);
@@ -28,5 +27,4 @@ public class HibernateUtil
         }
         return sessionFactory;
     }
-
 }

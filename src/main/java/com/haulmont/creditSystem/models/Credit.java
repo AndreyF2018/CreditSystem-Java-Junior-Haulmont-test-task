@@ -1,6 +1,5 @@
 package com.haulmont.creditSystem.models;
 
-import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 import javax.persistence.*;
@@ -22,12 +21,10 @@ public class Credit {
     @Column(name = "INTEREST_RATE")
     private double interestRate;
 
-    //@OneToOne(mappedBy = "credit", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
-    //private List<CreditOffer> creditOffers;
-
     public Credit(){
 
     }
+
     public Credit(long creditLimit, double interestRate){
         this.setCreditLimit(creditLimit);
         this.setInterestRate(interestRate);

@@ -13,7 +13,6 @@
         <property name="connection.username">SA</property>
         <property name="connection.password">sa</property>
 
-        <!-- <property name="hibernate.connection.pool_size">1</property> -->
         <property name="hibernate.current_session_context_class">org.hibernate.context.JTASessionContext</property>
 
         <!-- Enable the logging of all the generated SQL statements to the console -->
@@ -29,17 +28,5 @@
         <!-- This property makes Hibernate generate the appropriate SQL for the
          chosen database. -->
         <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
-
-
-        <!--
-        <property name="hibernate.enable_lazy_load_no_trans">true</property>
-        <property name="hibernate.archive.autodetection">class,hbm</property>
-        -->
-        <!-- mappings for annotated classes -->
-        <!--<mapping class="com.haulmont.testtask.models.Doctor" />
-        <mapping class="com.haulmont.testtask.models.Patient" />
-        <mapping class="com.haulmont.testtask.models.Prescription" /> -->
-
     </session-factory>
-
 </hibernate-configuration>

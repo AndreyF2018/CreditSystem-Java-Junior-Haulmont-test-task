@@ -34,10 +34,6 @@ public class Client {
     @Column(name = "PASSPORT_ID")
     private String passportId;
 
-
-   // @OneToOne (mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
-    //private CreditOffer creditOffer;
-
     public UUID getId() {
         return id;
     }
@@ -45,6 +41,7 @@ public class Client {
     public Client(){
 
     }
+
     public Client(String name, String secondName, @Nullable String patronymic, String phoneNumber, String email, String passportId) {
         this.setName(name);
         this.setSecondName(secondName);

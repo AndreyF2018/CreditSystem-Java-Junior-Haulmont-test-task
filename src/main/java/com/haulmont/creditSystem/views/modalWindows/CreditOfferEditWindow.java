@@ -21,14 +21,13 @@ public class CreditOfferEditWindow extends Window {
     private Credit selectedCredit;
 
     private BankService<CreditOffer> offerService;
-    private BankService<Client> clientService;
     private BankService<Credit> creditService;
 
     private TextField creditSumField = new TextField("New credit sum*:");
 
     private ComboBox<Credit> creditBox = new ComboBox<>("New credit*:");
 
-    private Button updateClientBtn = new Button ("Update a client", VaadinIcons.USER_CARD);
+    private Button updateClientBtn = new Button ("Edit a client", VaadinIcons.USER_CARD);
     private Button okBtn = new Button("Ok", VaadinIcons.CHECK);
     private Button cancelBtn = new Button("Cancel", VaadinIcons.CLOSE_CIRCLE);
 
@@ -39,8 +38,8 @@ public class CreditOfferEditWindow extends Window {
         offerService = new CreditOfferService();
         creditService = new CreditService();
         setModal(true);
-        setWidth("40%");
-        setHeight("65%");
+        setWidth("30%");
+        setHeight("40%");
         addAllComponents();
         setButtonsLogic();
     }

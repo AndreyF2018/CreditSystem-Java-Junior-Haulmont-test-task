@@ -42,7 +42,6 @@ public class PaymentScheduleWindow extends Window {
     private void addAllComponents(){
         setButtonsStyles();
 
-        //List<PaymentSchedule> paymentScheduleList = selectedOffer.getPaymentSchedule(enteredMonths);
         scheduleGrid.setItems(this.paymentScheduleList);
 
         BigDecimal totalInterestSum = getTotalInterestSum(enteredMonths);
@@ -86,13 +85,11 @@ public class PaymentScheduleWindow extends Window {
             e.printStackTrace();
             return null;
         }
-
     }
 
     private BigDecimal getTotalInterestSum (int months){
         BigDecimal totalInterestSum = BigDecimal.valueOf(0);
         try {
-            //List<PaymentSchedule> paymentScheduleList = selectedOffer.getPaymentSchedule(months);
             for (int i = 0; i < months; i ++) {
                 totalInterestSum = totalInterestSum.add(this.paymentScheduleList.get(i).getInterestSum());
             }
@@ -107,7 +104,6 @@ public class PaymentScheduleWindow extends Window {
     private BigDecimal getTotalPaymentSum (int months){
         BigDecimal totalPaymentSum = BigDecimal.valueOf(0);
         try {
-            //List<PaymentSchedule> paymentScheduleList = selectedOffer.getPaymentSchedule(months);
             for (int i = 0; i < months; i ++) {
                 totalPaymentSum = totalPaymentSum.add(this.paymentScheduleList.get(i).getPaymentSum());
             }

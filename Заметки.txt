@@ -1,6 +1,0 @@
-Авто генерация uuid - https://stackoverflow.com/questions/45086957/how-to-generate-an-auto-uuid-using-hibernate-on-spring-boot
-МБ переделать ссылку с Bank(CREDIT_ID)-Credit(ID) на Bank(CREDIT_ID)-CreditOffer(CREDIT_ID)
-Сумма кредита в графике платежа всегда уменьшается
-Сумма кредита в кредитном предложении не должна быть выше лимита по кредиту в кредитах
-МБ сделать валидацию email
-Удалить PaymentSchedule из БД.(+)

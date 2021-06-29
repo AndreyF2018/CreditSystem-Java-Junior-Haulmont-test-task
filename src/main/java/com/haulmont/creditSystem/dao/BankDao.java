@@ -1,6 +1,5 @@
 package com.haulmont.creditSystem.dao;
 
-import com.haulmont.creditSystem.models.Client;
 import com.haulmont.creditSystem.utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

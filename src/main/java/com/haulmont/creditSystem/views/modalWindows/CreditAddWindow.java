@@ -1,6 +1,5 @@
 package com.haulmont.creditSystem.views.modalWindows;
 
-import com.haulmont.creditSystem.models.Client;
 import com.haulmont.creditSystem.models.Credit;
 import com.haulmont.creditSystem.services.BankService;
 import com.haulmont.creditSystem.services.CreditService;

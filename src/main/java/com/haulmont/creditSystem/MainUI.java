@@ -1,9 +1,7 @@
 package com.haulmont.creditSystem;
 
 import com.haulmont.creditSystem.views.BankView;
-import com.haulmont.creditSystem.views.ClientView;
 import com.haulmont.creditSystem.views.CreditOfferView;
-import com.haulmont.creditSystem.views.CreditView;
 import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.*;

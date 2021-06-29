@@ -31,20 +31,8 @@ public class CreditOffer {
     @JoinColumn(name = "CREDIT_ID")
     private Credit credit;
 
-
-   /* @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "PAYMENT_SCHEDULE_ID")
-    */
-    //private List<PaymentSchedule> paymentSchedules;
-
     public CreditOffer(){
 
-    }
-    public CreditOffer(Client client, Credit credit, long creditSum, List<PaymentSchedule> paymentSchedules){
-        this.setClient(client);
-        this.setCredit(credit);
-        this.setCreditSum(creditSum);
-        //this.setPaymentSchedules(paymentSchedules);
     }
 
     public CreditOffer(Client client, Credit credit, long creditSum){
@@ -95,7 +83,6 @@ public class CreditOffer {
         BigDecimal curCreditSum = BigDecimal.valueOf(this.creditSum);
         BigDecimal interestRate = BigDecimal.valueOf(this.getCredit().getInterestRate()).divide(BigDecimal.valueOf(100));
         //Calculation
-        //int i = 0;
         for (int i = 0; i < months; i++){
             PaymentSchedule tempPaymentSchedule = new PaymentSchedule();
             paymentScheduleList.add(tempPaymentSchedule);
@@ -105,29 +92,14 @@ public class CreditOffer {
             BigDecimal interestSum = (curCreditSum.divide(BigDecimal.valueOf(months), 2, RoundingMode.HALF_UP)).multiply(interestRate).setScale(2, RoundingMode.HALF_UP);;
             BigDecimal paymentSum = loanBodySum.add(interestSum).setScale(2, RoundingMode.HALF_UP);
             curCreditSum = curCreditSum.subtract(loanBodySum);
-            //months --;
-
-            // interestSum = (creditOffer.creditSum * (credit.interestRate / 100)) / months
 
             paymentScheduleList.get(i).setPaymentDate(paymentDate);
             paymentScheduleList.get(i).setLoanBodySum(loanBodySum);
             paymentScheduleList.get(i).setInterestSum(interestSum);
             paymentScheduleList.get(i).setPaymentSum(paymentSum);
-            //i++;
         }
         return  paymentScheduleList;
     }
-
-
-    /*public List<PaymentSchedule> getPaymentSchedules() {
-        return paymentSchedules;
-    }
-
-    public void setPaymentSchedules(List<PaymentSchedule> paymentSchedules) {
-        this.paymentSchedules = paymentSchedules;
-    }
-
-     */
 
     @Override
     public boolean equals(Object o) {
@@ -137,13 +109,10 @@ public class CreditOffer {
         return creditSum == that.creditSum &&
                 client.equals(that.client) &&
                 credit.equals(that.credit);
-               // paymentSchedules.equals(that.paymentSchedules);
-    }
-/*
-    @Override
-    public int hashCode() {
-        return Objects.hash(creditSum, client, credit, paymentSchedules);
     }
 
- */
+    @Override
+    public int hashCode() {
+        return Objects.hash(creditSum, client, credit);
+    }
 }

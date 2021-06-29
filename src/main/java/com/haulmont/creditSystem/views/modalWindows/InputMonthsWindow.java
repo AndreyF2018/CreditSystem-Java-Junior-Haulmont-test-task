@@ -81,6 +81,5 @@ public class InputMonthsWindow extends Window {
         }
         return true;
     }
-
 }
 

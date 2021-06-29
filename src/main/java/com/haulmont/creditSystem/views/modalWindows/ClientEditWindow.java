@@ -8,8 +8,6 @@ import com.vaadin.icons.VaadinIcons;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
 
-import java.util.List;
-
 public class ClientEditWindow extends Window {
 
     private VerticalLayout mainLayout = new VerticalLayout();

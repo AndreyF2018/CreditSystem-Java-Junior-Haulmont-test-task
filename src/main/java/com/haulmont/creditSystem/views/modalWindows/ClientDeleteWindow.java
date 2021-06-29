@@ -17,7 +17,6 @@ public class ClientDeleteWindow extends Window {
     private Client selectedClient;
 
     private BankService<Client> clientService;
-    private BankService<CreditOffer> offerService;
 
     private TextField nameField = new TextField("Name:");
     private  TextField secondNameField = new TextField("Second name:");
@@ -37,7 +36,6 @@ public class ClientDeleteWindow extends Window {
     public ClientDeleteWindow(Client client){
         this.selectedClient = client;
         clientService = new ClientService();
-        offerService = new CreditOfferService();
         setModal(true);
         setWidth("40%");
         setHeight("80%");

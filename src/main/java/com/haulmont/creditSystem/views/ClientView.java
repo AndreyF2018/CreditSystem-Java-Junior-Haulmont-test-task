@@ -106,6 +106,5 @@ public class ClientView extends VerticalLayout {
             Notification.show("Something went wrong " + e.getMessage());
             e.printStackTrace();
         }
-
     }
 }

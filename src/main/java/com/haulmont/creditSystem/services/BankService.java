@@ -1,8 +1,5 @@
 package com.haulmont.creditSystem.services;
 
-import com.haulmont.creditSystem.dao.BankDao;
-import com.haulmont.creditSystem.models.Client;
-
 import java.util.List;
 import java.util.UUID;
 
