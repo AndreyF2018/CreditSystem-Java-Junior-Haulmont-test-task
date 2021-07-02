@@ -1,3 +1,12 @@
+# Запуск приложения
+В корневой папке проекта, где находится pom.xml, ввести следующее:
+
+<code>
+mvn package
+  
+mvn jetty:run
+</code>
+
 # CreditSystem-Java-Junior-Haulmont-test-task
 
 **Список кредитов**
